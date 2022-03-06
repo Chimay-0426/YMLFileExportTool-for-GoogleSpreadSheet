@@ -4,7 +4,7 @@
 
 # DEMO
  以下、スクリプトが実行される際の挙動demo。  
- <img src="https://github.com/Chimay-0426/YMLFileExportTool-for-GoogleSpreadSheet/issues/1#issue-1160512823" width="400">
+ <img src="https://user-images.githubusercontent.com/89734301/156912194-520bdce3-ceba-4706-bbd9-a667233f1602.gif" width="400">
  
 # CONFIGURATION
 * ProductName:	Mac OS X
