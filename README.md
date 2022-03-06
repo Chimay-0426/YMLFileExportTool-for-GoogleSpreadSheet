@@ -1,9 +1,9 @@
 # YMLFileExportTool for GoogleSpreadSheet
 
-このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGoogleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。
+このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGoogleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。取り込むYMLファイルと同名のsheet名があれば上書きを行い、ないの場合は新規作成としてYMLファイル名でsheetを作成し、書き出す。
 
 # DEMO
- 以下、スクリプトが実行される際の挙動demo。  
+ 以下、スクリプトが実行される際のDEMO。上書きのケースで、すでに白紙の同名sheetが対象spreadsheetに存在するケース。  
  <img src="https://user-images.githubusercontent.com/89734301/156912194-520bdce3-ceba-4706-bbd9-a667233f1602.gif" width="400">
  
 # CONFIGURATION
@@ -14,7 +14,8 @@
  
 # Features
  
-dict型のデータが格納されたlist形式のYMLファイルであれば、どんなにカラム数及びリスト内の要素数が多くとも、書き込むためのAPIcall数が2回で済む。なので、今回のようなOAuth認証を用いたケースでは大量のデータ数を引数にかなり大量にとってもcall数の単位時間あたりの上限に引っかかることはまずない。  
+・dict型のデータが格納されたlist形式のYMLファイルであれば、どんなにカラム数及びリスト内の要素数が多くとも、書き込むためのAPIcall数が2回で済む。なので、今回のようなOAuth認証を用いたケースでは大量のデータ数を引数にかなり大量にとってもcall数の単位時間あたりの上限に引っかかることはまずない。  
+・OAuth認証は基本的にGoogleのQuickstart(cf https://developers.google.com/people/quickstart/python )に依拠しているが、error handlingのため部分的に改変している。
  
 # Requirement
  Python関連ライブラリ
@@ -38,7 +39,7 @@ $ pip install google-auth-oauthlib
 
 # Usage
  
-・scriptを実行の前に自身のGoogleAccountでAPIconsoleにログインし、プロジェクトを作成し、関連API（ここでは、GoogleSheetAPI）を有効にし、OAuth認証を作成し、認証ファイルであるjsonファイルを取得する。以下URLの【Google Sheets API の設定】を要参照（cf https://japan.appeon.com/technical/techblog/technicalblog019/）。  
+scriptを実行の前に自身のGoogleAccountでAPIconsoleにログインし、プロジェクトを作成し、関連API（ここでは、GoogleSheetAPI）を有効にし、OAuth認証を作成し、認証ファイルであるjsonファイルを取得する。以下URLの【Google Sheets API の設定】を要参照（cf https://japan.appeon.com/technical/techblog/technicalblog019/）。  
 
 From your command line:  
 1. 対象リポジトリをclone
@@ -57,7 +58,7 @@ $ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
  
 # Note
 
-・YMLを扱うためのライブラリとして比較的スタンダードに用いられるpyyamlは本スクリプトでは用いない。理由として、ユースケースとして考えられた対象YMLにYML1.1でbool型に解釈される文字列onが入って炊いたためで、1.2でloadするためruamel.yamlを用いた（cf https://yaml.org/type/bool.html）。
+・YMLを扱うためのライブラリとして比較的スタンダードに用いられるpyyamlは本スクリプトでは用いない。理由として、ユースケースとして考えられた対象YMLにYML1.1でbool型に解釈される文字列onが入っていたためで、1.2でloadするためruamel.yamlを用いた（cf https://yaml.org/type/bool.html）。
 
  
 # Author
