@@ -1,6 +1,6 @@
 # YMLFileExportTool for GoogleSpreadSheet
 
-このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGOOgleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。
+このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGoogleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。
 
 # DEMO
  以下、スクリプトが実行される際の挙動demo。  
@@ -51,7 +51,7 @@ $ cd (a directory)
 ```
 3. command lineでスクリプトを実行。command line引数には対象YMLfileが存在するdirectoryのパスを指定するか、スクリプトと同じdirectoryにあるYMLfileを指定する。
 ```bash
-$ python ~ ./temp/ (or sample1.yml sample2.ym;)
+$ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
 ```
 *一回目の実行時にはGoogleAPIの初回ブラウザ認証が行われ、それを受け同じdirectoryにtokenが生成され、本スクリプトではcredential.jsonの名前でtokenが生成される。
  
