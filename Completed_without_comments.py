@@ -85,7 +85,6 @@ def Read_Yml_Write(credential):
                         print(value)
 
 def GSpread_Operate(credential, obj, file):
-#SpreadSheetの認証。
     gc = gspread.authorize(credential)
     title = []
     try:    
