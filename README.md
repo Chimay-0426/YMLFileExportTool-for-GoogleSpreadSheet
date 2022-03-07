@@ -55,7 +55,8 @@ $ cd (a directory)
 $ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
 ```
 *一回目の実行時にはGoogleAPIの初回ブラウザ認証が行われ（以下詳細な説明を割愛するが、ブラウザ認証のフロー。）、それを受け同じdirectoryにtokenが生成され、本スクリプトではcredential.jsonの名前でtokenが生成される。  
-*本リポジトリにsampleのYMLファイルを3つあるので、試してみてください。(sample1.yml, sample2.yml, sample3.yml)
+*本リポジトリにsampleのYMLファイルを3つあるので、試してみてください。(sample1.yml, sample2.yml, sample3.yml)  
+https://github.com/Chimay-0426/YMLFileExportTool-for-GoogleSpreadSheet/issues/4#issue-1160943578
 
 （以下初回のブラウザ認証のフロー）  
   <img src="https://user-images.githubusercontent.com/89734301/156970130-538e1cfe-29a0-4e31-93f1-80eeceea1934.gif" width="600">
