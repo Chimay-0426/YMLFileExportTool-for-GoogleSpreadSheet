@@ -54,7 +54,7 @@ $ cd (a directory)
 ```bash
 $ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
 ```
-*一回目の実行時にはGoogleAPIの初回ブラウザ認証が行われ（以下詳細な説明を割愛するが、ブラウザ認証のフロー。）、それを受け同じdirectoryにtokenが生成され、本スクリプトではcredential.jsonの名前でtokenが生成される。
+*一回目の実行時にはGoogleAPIの初回ブラウザ認証が行われ（以下詳細な説明を割愛するが、ブラウザ認証のフロー。）、それを受け同じdirectoryにtokenが生成され、本スクリプトではcredential.jsonの名前でtokenが生成される。  
 *本リポジトリにsampleのYMLファイルを3つあるので、試してみてください。(sample1.yml, sample2.yml, sample3.yml)
 
 （以下初回のブラウザ認証のフロー）  
