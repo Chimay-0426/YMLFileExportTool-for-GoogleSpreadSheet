@@ -71,4 +71,3 @@ https://github.com/Chimay-0426/YMLFileExportTool-for-GoogleSpreadSheet/issues/4#
 
 Name 山内　しんめい（Yamauchi SHIMMEI）  
 E-Mail saepo12100426@gmail.com  
- 
