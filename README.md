@@ -70,5 +70,4 @@ $ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
 
 Name 山内　しんめい（Yamauchi SHIMMEI）  
 E-Mail saepo12100426@gmail.com  
-Twitter https://twitter.com/yuuya88105009  
  
