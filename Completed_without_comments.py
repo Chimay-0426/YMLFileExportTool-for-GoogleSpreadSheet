@@ -103,7 +103,7 @@ def GSpread_Operate(credential, obj, file):
             worksheet.delete_columns(len(columns) + 1, worksheet.col_count)  
         else:
             pass
-       if worksheet.row_count > len(obj) + 1:
+        if worksheet.row_count > len(obj) + 1:
             worksheet.delete_rows(len(obj) + 2, worksheet.row_count)
         else:
             pass
