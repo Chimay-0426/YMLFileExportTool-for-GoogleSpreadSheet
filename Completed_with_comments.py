@@ -25,7 +25,7 @@ CREDENTIAL_PATH = os.path.join(CREDENTIAL_DIR, 'credential.json')
 SCOPES = "https://www.googleapis.com/auth/spreadsheets"
 
 #対象のWorkbookのIDを以下に取得。
-WORKBOOK_ID ='1RLrX42SDIX1PF-uZUX6Ju9N_do9wkZGtznD-QbWnnkA'
+WORKBOOK_ID ='WorkbookIDを書く'
 
 #関数を順に呼び出す。
 def main():
