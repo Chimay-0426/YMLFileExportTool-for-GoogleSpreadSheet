@@ -1,10 +1,10 @@
 # YMLFileExportTool for GoogleSpreadSheet
 
-このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGoogleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。取り込むYMLファイルと同名のsheet名があれば上書きを行い、ないの場合は新規作成としてYMLファイル名でsheetを作成し、書き出す。
+このスクリプトは引数に取られたYML形式のファイル（引数にdirectoryをとる場合はそこに存在する全てのYML形式のファイル）の中身をGoogleSheetAPIを用いて、GoogleSpreadSheet上に書き出すスクリプトである。このスクリプトはdict型のデータが格納されたlist形式のYMLファイルのレコードをkeyとvalueにわけ、spreadsheetの最初の行（raw）にはkeyをカラム（columns）として、それ以降の行に各カラムに対応する値（value）をカラム以後の行（raw）に書き込んでいく。取り込むYMLファイルと同名のsheet名があれば上書きを行い、ない場合は新規作成としてYMLファイル名でsheetを作成し、書き出す。
 
 # DEMO
  以下、スクリプトが実行される際のDEMO。上書きのケースで、すでに白紙の同名sheetが対象spreadsheetに存在するケース。  
- <img src="https://user-images.githubusercontent.com/89734301/156912194-520bdce3-ceba-4706-bbd9-a667233f1602.gif" width="400">
+ <img src="https://user-images.githubusercontent.com/89734301/156912194-520bdce3-ceba-4706-bbd9-a667233f1602.gif" width="600">
  
 # CONFIGURATION
 * ProductName:	Mac OS X
@@ -39,14 +39,14 @@ $ pip install google-auth-oauthlib
 
 # Usage
  
-scriptを実行の前に自身のGoogleAccountでAPIconsoleにログインし、プロジェクトを作成し、関連API（ここでは、GoogleSheetAPI）を有効にし、OAuth認証を作成し、認証ファイルであるjsonファイルを取得する。以下URLの【Google Sheets API の設定】を要参照（cf https://japan.appeon.com/technical/techblog/technicalblog019/）。  
+scriptを実行の前に自身のGoogleAccountでAPIconsoleにログインし、プロジェクトを作成し、関連API（ここでは、GoogleSheetAPI）を有効にし、OAuth認証を作成し、認証ファイルであるJSONファイルを取得する。JSONファイル名を”client_secret.json”に変更する。以下URLの【Google Sheets API の設定】を要参照（cf https://japan.appeon.com/technical/techblog/technicalblog019/）。  
 
 From your command line:  
 1. 対象リポジトリをclone
 ```bash
 $ git clone https://github.com/~~~~
 ```
-2. scriptが位置するdirectoryに移動。また同directoryに認証JSONfileをおく。
+2. cloneを実行したscriptが位置するdirectoryに移動。また同directoryに認証JSONfileをおく。
 ```bash
 $ cd (a directory)
 ```
@@ -55,6 +55,7 @@ $ cd (a directory)
 $ python YMLFileExportTool.py ./temp/ (or sample1.yml sample2.yml)
 ```
 *一回目の実行時にはGoogleAPIの初回ブラウザ認証が行われ、それを受け同じdirectoryにtokenが生成され、本スクリプトではcredential.jsonの名前でtokenが生成される。
+*本リポジトリにsampleのYMLファイルを3つあるので、試してみてください。(sample1.yml, sample2.yml, sample3.yml)
  
 # Note
 
