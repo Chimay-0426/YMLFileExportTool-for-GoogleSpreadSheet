@@ -44,7 +44,7 @@ scriptを実行の前に自身のGoogleAccountでAPIconsoleにログインし、
 From your command line:  
 1. 対象リポジトリをclone
 ```bash
-$ git clone https://github.com/~~~~
+$ git clone https://github.com/Chimay-0426/YMLFileExportTool-for-GoogleSpreadSheet.git
 ```
 2. cloneを実行したscriptが位置するdirectoryに移動。また同directoryに認証JSONfileをおく。
 ```bash
