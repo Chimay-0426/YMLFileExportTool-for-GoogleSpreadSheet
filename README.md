@@ -19,7 +19,7 @@
  
 # Requirement
  Python関連ライブラリ
-* ruame.yaml 0.17.20
+* ruamel.yaml 0.17.20
 * gspread 5.1.1 
 
  Google認証関連ライブラリ
